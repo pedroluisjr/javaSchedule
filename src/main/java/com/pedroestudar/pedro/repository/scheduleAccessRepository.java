@@ -12,5 +12,8 @@ public interface scheduleAccessRepository extends JpaRepository<scheduleAccess, 
 
     @Query(value = "select sAccess from scheduleAccess sAccess where sAccess.email = :email")
     Optional<scheduleAccess> findByEmail(String email);
+
+    // @Query(value = "select sAccess from scheduleAccess sAccess where sAccess.numero = :numero")
+    //Optional<scheduleAccess> findByNumber(Long numero);
 }
 
