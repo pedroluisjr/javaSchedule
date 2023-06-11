@@ -1,6 +1,7 @@
 package com.pedroestudar.pedro.service;
 
 import com.pedroestudar.pedro.dto.RequestPcApiDto;
+import com.pedroestudar.pedro.model.scheduleAccess;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

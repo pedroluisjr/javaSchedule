@@ -37,6 +37,15 @@ public class scheduleAccess {
     @Column(name = "aniversario", nullable = false)
     private String aniversario;
 
+    @Column(name = "rua", nullable = false)
+    private String rua;
+
+    @Column(name = "bairro", nullable = false)
+    private String bairro;
+
+    @Column(name = "cidade", nullable = false)
+    private String cidade;
+
     @Column(name = "createdAt")
     @CreationTimestamp
     private Date createdAt;

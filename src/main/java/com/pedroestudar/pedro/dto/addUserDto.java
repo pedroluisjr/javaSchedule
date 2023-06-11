@@ -31,7 +31,7 @@ public class addUserDto {
 
     private String cep;
 
-    public scheduleAccess toscheduleAccess() {
+    public scheduleAccess toscheduleAccess(RequestPcApiDto searchCep) {
         scheduleAccess sAccess = new scheduleAccess();
         sAccess.setAniversario(this.getAnniversary());
         sAccess.setNome(this.getUsername());
@@ -40,6 +40,9 @@ public class addUserDto {
         sAccess.setIdade(this.getAge());
         sAccess.setEmail(this.getEmail());
         sAccess.setSexo(this.getSex());
+        sAccess.setRua(searchCep.getLogradouro());
+        sAccess.setBairro(searchCep.getBairro());
+        sAccess.setCidade(searchCep.getLocalidade());
 
         return sAccess;
     }

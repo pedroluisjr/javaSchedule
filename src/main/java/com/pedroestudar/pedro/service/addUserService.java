@@ -19,10 +19,12 @@ public class addUserService {
     scheduleAccessRepository access;
     public String save(addUserDto body) {
         RequestPcApiDto sCep = searchCep.searchDto(body.getCep());
-        System.out.println("Cep recebido "+sCep.getBairro());
+        System.out.println("Rua "+sCep.getLogradouro());
+        System.out.println("Bairro "+sCep.getBairro());
+        System.out.println("Cidade "+sCep.getLocalidade());
         List<scheduleAccess> sAccess = access.findUser(body.getEmail(), body.getNumber());
         if (sAccess.isEmpty()) {
-            access.save(body.toscheduleAccess());
+            access.save(body.toscheduleAccess(sCep));
             return "Usuário cadastrado";
         } else {
             return "Email ou número já existe";
