@@ -3,11 +3,11 @@ package com.pedroestudar.pedro.dto;
 import com.pedroestudar.pedro.model.scheduleAccess;
 import lombok.Data;
 
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
+@Valid
 @Data
 public class addUserDto {
 
@@ -24,7 +24,7 @@ public class addUserDto {
 
     private String sex;
 
-    @NotNull(message = "O campo número não pode ser vazio") @Pattern(regexp = "\\d{10}", message = "O número de telefone deve ter 10 dígitos.")
+    @NotNull(message = "O campo número não pode ser vazio")
     private Long number;
 
     private Long age;
