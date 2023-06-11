@@ -29,6 +29,8 @@ public class addUserDto {
 
     private Long age;
 
+    private String cep;
+
     public scheduleAccess toscheduleAccess() {
         scheduleAccess sAccess = new scheduleAccess();
         sAccess.setAniversario(this.getAnniversary());
